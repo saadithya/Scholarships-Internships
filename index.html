@@ -3,278 +3,941 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Scholarships & Internships</title>
+
     <style>
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #1f2937;
             background: #f5f7f6;
         }
 
+        /* =========================
+           NAVBAR
+        ========================= */
+
         .navbar {
-            background: rgba(255,255,255,0.97);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(12px);
             padding: 16px 30px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 1px 10px rgba(0,0,0,0.06);
+
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.06);
+
             position: sticky;
             top: 0;
             z-index: 100;
         }
+
         .navbar-brand {
             font-size: 1.25rem;
             font-weight: 800;
+
             color: #1e40af;
+
             text-decoration: none;
+
             letter-spacing: -0.3px;
         }
+
         .navbar-links {
             display: flex;
             align-items: center;
+
             gap: 28px;
+
             list-style: none;
+
             margin: 0;
             padding: 0;
         }
+
         .navbar-links a {
             color: #4b5563;
+
             text-decoration: none;
+
             font-size: 0.95rem;
+
             font-weight: 500;
+
             transition: color 0.2s ease;
         }
-        .navbar-links a:hover { color: #1e40af; }
+
+        .navbar-links a:hover {
+            color: #1e40af;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             background:
-                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12), transparent 30%),
-                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.08), transparent 30%),
-                linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(255, 255, 255, 0.13),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(255, 255, 255, 0.08),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #1e40af 0%,
+                    #1e3a8a 100%
+                );
+
             color: white;
-            padding: 75px 20px 85px;
+
+            padding: 85px 20px 90px;
+
             text-align: center;
         }
-        .hero-content { max-width: 1100px; margin: 0 auto; }
+
+        .hero-content {
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
         .hero h1 {
             font-size: clamp(2.2rem, 5vw, 3.4rem);
+
             line-height: 1.15;
+
             margin: 0 0 18px;
+
             font-weight: 800;
+
             letter-spacing: -1.5px;
         }
+
         .hero p {
             font-size: 1.12rem;
-            max-width: 680px;
-            margin: 0 auto 38px;
+
+            max-width: 700px;
+
+            margin: 0 auto 40px;
+
             opacity: 0.94;
+
             line-height: 1.7;
         }
 
+
+        /* =========================
+           APP ICON
+        ========================= */
+
+        .app-icon {
+            width: 105px;
+            height: 105px;
+
+            margin: 0 auto 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255, 255, 255, 0.15);
+
+            border: 1px solid rgba(255, 255, 255, 0.25);
+
+            border-radius: 24px;
+
+            font-size: 3.5rem;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.18);
+
+            backdrop-filter: blur(10px);
+        }
+
+
+        /* =========================
+           DOWNLOAD BUTTONS
+        ========================= */
+
         .availability {
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
             gap: 14px;
-            margin-top: 24px;
+
+            margin-top: 25px;
+
             flex-wrap: wrap;
         }
+
         .store-button {
-            min-width: 190px;
+            min-width: 195px;
+
             min-height: 58px;
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
+
             gap: 11px;
+
             padding: 10px 20px;
+
             border-radius: 12px;
+
             text-decoration: none;
-            background: rgba(255,255,255,0.13);
-            border: 1px solid rgba(255,255,255,0.3);
+
+            background: rgba(255, 255, 255, 0.13);
+
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
             color: white;
+
             backdrop-filter: blur(8px);
-            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
         }
+
         .store-button:hover {
             transform: translateY(-2px);
-            background: rgba(255,255,255,0.2);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+            background: rgba(255, 255, 255, 0.2);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.15);
         }
-        .store-button.disabled { cursor: default; opacity: 0.72; }
-        .store-button.disabled:hover { transform: none; background: rgba(255,255,255,0.13); box-shadow: none; }
-        .store-icon { width: 27px; height: 27px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
-        .store-text { display: flex; flex-direction: column; text-align: left; line-height: 1.15; }
-        .store-small { font-size: 0.7rem; opacity: 0.85; margin-bottom: 3px; }
-        .store-name { font-size: 1rem; font-weight: 700; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 75px 20px; }
 
-        .features { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin: 0; }
+        /* Disabled App Store button */
+
+        .store-button.disabled {
+            cursor: default;
+
+            opacity: 0.72;
+        }
+
+        .store-button.disabled:hover {
+            transform: none;
+
+            background: rgba(255, 255, 255, 0.13);
+
+            box-shadow: none;
+        }
+
+
+        /* Store icon */
+
+        .store-icon {
+            width: 27px;
+            height: 27px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 1.5rem;
+
+            line-height: 1;
+        }
+
+
+        /* Store text */
+
+        .store-text {
+            display: flex;
+
+            flex-direction: column;
+
+            text-align: left;
+
+            line-height: 1.15;
+        }
+
+        .store-small {
+            font-size: 0.7rem;
+
+            opacity: 0.85;
+
+            margin-bottom: 3px;
+        }
+
+        .store-name {
+            font-size: 1rem;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .container {
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 75px 20px;
+        }
+
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .features {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+
+            margin: 0;
+        }
+
         .feature {
             background: white;
+
             padding: 30px;
+
             border-radius: 18px;
+
             border: 1px solid #e5e7eb;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.045);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.045);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
-        .feature:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(0,0,0,0.09); }
+
+        .feature:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 14px 30px rgba(0, 0, 0, 0.09);
+        }
+
         .feature-icon {
-            width: 52px; height: 52px;
-            display: flex; align-items: center; justify-content: center;
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
             background: #e8eef7;
+
             border-radius: 14px;
+
             font-size: 1.6rem;
+
             margin-bottom: 20px;
         }
-        .feature h3 { font-size: 1.15rem; margin: 0 0 10px; color: #111827; font-weight: 700; }
-        .feature p { color: #6b7280; margin: 0; line-height: 1.7; font-size: 0.95rem; }
+
+        .feature h3 {
+            font-size: 1.15rem;
+
+            margin: 0 0 10px;
+
+            color: #111827;
+
+            font-weight: 700;
+        }
+
+        .feature p {
+            color: #6b7280;
+
+            margin: 0;
+
+            line-height: 1.7;
+
+            font-size: 0.95rem;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
 
         .cta {
             text-align: center;
+
             padding: 65px 30px;
+
             background: white;
+
             border: 1px solid #e5e7eb;
+
             border-radius: 22px;
+
             margin: 65px 0 10px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.05);
         }
-        .cta h2 { font-size: 2rem; margin: 0 0 14px; color: #111827; letter-spacing: -0.5px; }
-        .cta p { font-size: 1.05rem; color: #6b7280; max-width: 650px; margin: 0 auto 28px; line-height: 1.7; }
+
+        .cta h2 {
+            font-size: 2rem;
+
+            margin: 0 0 14px;
+
+            color: #111827;
+
+            letter-spacing: -0.5px;
+        }
+
+        .cta p {
+            font-size: 1.05rem;
+
+            color: #6b7280;
+
+            max-width: 650px;
+
+            margin: 0 auto 28px;
+
+            line-height: 1.7;
+        }
+
         .cta-button {
             display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: 10px;
-            background: #1e40af;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s ease, transform 0.2s ease;
-        }
-        .cta-button:hover { background: #1e3a8a; transform: translateY(-2px); }
 
-        .footer { text-align: center; padding: 45px 20px; color: #9ca3af; font-size: 0.9rem; }
-        .footer p { margin: 7px 0; }
-        .footer a { color: #1e40af; text-decoration: none; font-weight: 500; }
-        .footer a:hover { text-decoration: underline; }
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 12px 24px;
+
+            border-radius: 10px;
+
+            background: #1e40af;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: #1e3a8a;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            text-align: center;
+
+            padding: 45px 20px;
+
+            color: #9ca3af;
+
+            font-size: 0.9rem;
+        }
+
+        .footer p {
+            margin: 7px 0;
+        }
+
+        .footer a {
+            color: #1e40af;
+
+            text-decoration: none;
+
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
 
         @media (max-width: 900px) {
-            .features { grid-template-columns: repeat(2,1fr); }
-            .navbar-links { gap: 18px; }
+
+            .features {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .navbar-links {
+                gap: 18px;
+            }
         }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 650px) {
-            .navbar { padding: 15px 20px; flex-direction: column; gap: 12px; }
-            .navbar-brand { font-size: 1.2rem; }
-            .navbar-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 18px; }
-            .navbar-links a { font-size: 0.85rem; }
-            .hero { padding: 55px 16px 65px; }
-            .hero h1 { font-size: 2.15rem; letter-spacing: -0.8px; }
-            .hero p { font-size: 1rem; margin-bottom: 28px; }
-            .availability { flex-direction: column; margin-top: 20px; gap: 10px; }
-            .store-button { width: 100%; max-width: 260px; }
-            .container { padding: 50px 16px; }
-            .features { grid-template-columns: 1fr; gap: 18px; }
-            .feature { padding: 25px; }
-            .cta { margin-top: 45px; padding: 45px 22px; border-radius: 18px; }
-            .cta h2 { font-size: 1.7rem; }
+
+            .navbar {
+                padding: 15px 20px;
+
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .navbar-links {
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 10px 18px;
+            }
+
+            .navbar-links a {
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 60px 16px 70px;
+            }
+
+            .app-icon {
+                width: 85px;
+                height: 85px;
+
+                border-radius: 20px;
+
+                font-size: 2.8rem;
+
+                margin-bottom: 24px;
+            }
+
+            .hero h1 {
+                font-size: 2.15rem;
+
+                letter-spacing: -0.8px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+
+                margin-bottom: 28px;
+            }
+
+            .availability {
+                flex-direction: column;
+
+                margin-top: 20px;
+
+                gap: 10px;
+            }
+
+            .store-button {
+                width: 100%;
+
+                max-width: 270px;
+            }
+
+            .container {
+                padding: 50px 16px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+            .feature {
+                padding: 25px;
+            }
+
+            .cta {
+                margin-top: 45px;
+
+                padding: 45px 22px;
+
+                border-radius: 18px;
+            }
+
+            .cta h2 {
+                font-size: 1.7rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
     <nav class="navbar">
-        <a href="#" class="navbar-brand">Scholarships & Internships</a>
+
+        <a href="#" class="navbar-brand">
+            Scholarships & Internships
+        </a>
+
         <ul class="navbar-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="privacy_policy.html">Privacy Policy</a></li>
-            <li><a href="mailto:sujith81159@gmail.com">Contact Us</a></li>
+
+            <li>
+                <a href="#features">
+                    Features
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="privacy_policy.html">
+                    Privacy Policy
+                </a>
+            </li>
+
+            <li>
+                <a href="mailto:sujith81159@gmail.com">
+                    Contact Us
+                </a>
+            </li>
+
         </ul>
+
     </nav>
 
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <section class="hero">
+
         <div class="hero-content">
-            <h1>Scholarships & Internships</h1>
-            <p>
-                Discover scholarships, internships, and competitions from around the world.
-                Browse opportunities by category, save your favorites, and never miss a deadline.
-            </p>
-            <div class="availability">
-                <a href="https://apps.apple.com/app/scholarships-internships/id6793961211" class="store-button" target="_blank">
-                    <span class="store-icon">🍎</span>
-                    <span class="store-text">
-                        <span class="store-small">Download on the</span>
-                        <span class="store-name">App Store</span>
-                    </span>
-                </a>
-                <span class="store-button disabled">
-                    <span class="store-icon">▶️</span>
-                    <span class="store-text">
-                        <span class="store-small">Coming soon on</span>
-                        <span class="store-name">Google Play</span>
-                    </span>
-                </span>
+
+            <div class="app-icon">
+                🎓
             </div>
+
+            <h1>
+                Scholarships & Internships
+            </h1>
+
+            <p>
+                Discover scholarships, internships, and competitions
+                from around the world. Browse opportunities by category,
+                save your favorites, and find opportunities that match
+                your goals.
+            </p>
+
+
+            <!-- =========================
+                 STORE BUTTONS
+            ========================= -->
+
+            <div class="availability">
+
+
+                <!-- =========================
+                     GOOGLE PLAY
+                     PUBLISHED
+                ========================= -->
+
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.saadithya.scholarshipsinternships&hl=en_IN"
+                    class="store-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <span class="store-icon">
+                        ▶
+                    </span>
+
+                    <span class="store-text">
+
+                        <span class="store-small">
+                            GET IT ON
+                        </span>
+
+                        <span class="store-name">
+                            Google Play
+                        </span>
+
+                    </span>
+
+                </a>
+
+
+                <!-- =========================
+                     APP STORE
+                     COMING SOON
+                ========================= -->
+
+                <span class="store-button disabled">
+
+                    <span class="store-icon">
+                        
+                    </span>
+
+                    <span class="store-text">
+
+                        <span class="store-small">
+                            COMING SOON ON
+                        </span>
+
+                        <span class="store-name">
+                            App Store
+                        </span>
+
+                    </span>
+
+                </span>
+
+            </div>
+
         </div>
+
     </section>
 
-    <div class="container">
-        <div class="features" id="features">
-            <div class="feature">
-                <div class="feature-icon">🎓</div>
-                <h3>Global Opportunities</h3>
-                <p>Browse scholarships, internships, and competitions from universities and organizations worldwide, updated daily.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">📂</div>
-                <h3>Smart Categories</h3>
-                <p>Filter by category — STEM, arts, sports, research, and more — to find opportunities that match your interests.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">❤️</div>
-                <h3>Save Favorites</h3>
-                <p>Like opportunities to save them and easily revisit the ones you're most interested in applying to.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🔍</div>
-                <h3>Powerful Search</h3>
-                <p>Search across all opportunities with keyword filtering to quickly find what you're looking for.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">📋</div>
-                <h3>Track Applications</h3>
-                <p>Keep track of which opportunities you've applied to so you can stay organized throughout the process.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🌙</div>
-                <h3>Dark Mode</h3>
-                <p>Read comfortably day or night with built-in light, dark, and system-matched themes.</p>
-            </div>
-        </div>
 
-        <div class="cta" id="about">
-            <h2>Start Your Journey Today</h2>
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="container">
+
+        <section class="features" id="features">
+
+
+            <!-- FEATURE 1 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Global Opportunities
+                </h3>
+
+                <p>
+                    Discover scholarships, internships, and competitions
+                    from universities, organizations, and institutions
+                    around the world.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 2 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📂
+                </div>
+
+                <h3>
+                    Smart Categories
+                </h3>
+
+                <p>
+                    Explore opportunities across STEM, arts, writing,
+                    photography, research, design, hackathons, and more.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 3 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Save Favorites
+                </h3>
+
+                <p>
+                    Save opportunities you're interested in and easily
+                    revisit them whenever you're ready to apply.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 4 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Powerful Search
+                </h3>
+
+                <p>
+                    Search across opportunities using keywords and
+                    categories to quickly find scholarships, internships,
+                    competitions, and other opportunities.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 5 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Track Applications
+                </h3>
+
+                <p>
+                    Keep track of opportunities you've applied to and
+                    stay organized throughout your application journey.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 6 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🌙
+                </div>
+
+                <h3>
+                    Dark Mode
+                </h3>
+
+                <p>
+                    Read comfortably day or night with light, dark,
+                    and system-matched themes built into the app.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT / CTA
+        ========================= -->
+
+        <section class="cta" id="about">
+
+            <h2>
+                Start Your Journey Today
+            </h2>
+
             <p>
-                Whether you're a student looking for funding, an aspiring professional seeking internships,
-                or a competitor eyeing the next big challenge — find it all in one place.
+                Whether you're a student looking for funding, an aspiring
+                professional seeking internships, or someone looking for
+                your next competition or creative opportunity, discover
+                opportunities in one place.
             </p>
-            <a href="https://apps.apple.com/app/scholarships-internships/id6793961211" class="cta-button" target="_blank">Download Free</a>
-        </div>
-    </div>
+
+            <a
+                href="https://play.google.com/store/apps/details?id=com.saadithya.scholarshipsinternships&hl=en_IN"
+                class="cta-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Download on Google Play
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer class="footer">
-        <p>&copy; 2025 Scholarships & Internships. All rights reserved.</p>
+
         <p>
-            <a href="privacy_policy.html">Privacy Policy</a> &middot;
-            <a href="mailto:saadithya.dev@gmail.com">Contact</a>
+            &copy; 2026 Scholarships & Internships.
+            All rights reserved.
         </p>
+
+        <p>
+
+            <a href="privacy_policy.html">
+                Privacy Policy
+            </a>
+
+            &nbsp;&middot;&nbsp;
+
+            <a href="mailto:sujith81159@gmail.com">
+                Contact Us
+            </a>
+
+        </p>
+
     </footer>
 
 </body>
