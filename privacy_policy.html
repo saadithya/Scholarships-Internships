@@ -3,216 +3,760 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Privacy Policy — Scholarships & Internships</title>
+
     <style>
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #1f2937;
             background: #f5f7f6;
         }
 
+        /* =========================
+           NAVBAR
+        ========================= */
+
         .navbar {
-            background: rgba(255,255,255,0.97);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(12px);
+
             padding: 16px 30px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 1px 10px rgba(0,0,0,0.06);
+
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.06);
+
             position: sticky;
             top: 0;
             z-index: 100;
         }
+
         .navbar-brand {
             font-size: 1.25rem;
             font-weight: 800;
+
             color: #1e40af;
+
             text-decoration: none;
+
             letter-spacing: -0.3px;
         }
+
         .navbar-links {
             display: flex;
             align-items: center;
+
             gap: 28px;
+
             list-style: none;
+
             margin: 0;
             padding: 0;
         }
+
         .navbar-links a {
             color: #4b5563;
+
             text-decoration: none;
+
             font-size: 0.95rem;
+
             font-weight: 500;
+
             transition: color 0.2s ease;
         }
-        .navbar-links a:hover { color: #1e40af; }
+
+        .navbar-links a:hover {
+            color: #1e40af;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
 
         .container {
             max-width: 820px;
+
             margin: 0 auto;
+
             padding: 60px 20px 80px;
         }
 
         h1 {
             font-size: 2.2rem;
+
             font-weight: 800;
+
             color: #111827;
+
             letter-spacing: -0.8px;
+
             margin: 0 0 8px;
         }
 
         .last-updated {
             color: #6b7280;
+
             font-size: 0.95rem;
+
             margin: 0 0 40px;
         }
 
+
+        /* =========================
+           POLICY SECTIONS
+        ========================= */
+
         .section {
             background: white;
+
             border-radius: 16px;
+
             border: 1px solid #e5e7eb;
+
             padding: 32px;
+
             margin-bottom: 20px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+
+            box-shadow:
+                0 4px 16px rgba(0, 0, 0, 0.04);
         }
 
         .section h2 {
             font-size: 1.2rem;
+
             font-weight: 700;
+
             color: #111827;
+
             margin: 0 0 12px;
         }
 
         .section p {
             color: #4b5563;
+
             margin: 0 0 14px;
+
             font-size: 0.97rem;
+
             line-height: 1.75;
         }
 
-        .section p:last-child { margin-bottom: 0; }
+        .section p:last-child {
+            margin-bottom: 0;
+        }
 
         .section ul {
             color: #4b5563;
+
             margin: 0 0 14px;
+
             padding-left: 22px;
+
             font-size: 0.97rem;
+
             line-height: 1.75;
         }
 
-        .section ul li { margin-bottom: 6px; }
+        .section ul li {
+            margin-bottom: 6px;
+        }
 
-        a { color: #1e40af; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        a {
+            color: #1e40af;
+
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         .footer {
             text-align: center;
+
             padding: 45px 20px;
+
             color: #9ca3af;
+
             font-size: 0.9rem;
         }
-        .footer p { margin: 7px 0; }
-        .footer a { color: #1e40af; font-weight: 500; }
-        .footer a:hover { text-decoration: underline; }
+
+        .footer p {
+            margin: 7px 0;
+        }
+
+        .footer a {
+            color: #1e40af;
+
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 650px) {
-            .navbar { padding: 15px 20px; flex-direction: column; gap: 12px; }
-            .navbar-brand { font-size: 1.2rem; }
-            .navbar-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 18px; }
-            .navbar-links a { font-size: 0.85rem; }
-            .container { padding: 40px 16px 60px; }
-            h1 { font-size: 1.8rem; }
-            .section { padding: 24px; }
+
+            .navbar {
+                padding: 15px 20px;
+
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .navbar-links {
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 10px 18px;
+            }
+
+            .navbar-links a {
+                font-size: 0.85rem;
+            }
+
+            .container {
+                padding: 40px 16px 60px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 24px;
+            }
         }
     </style>
 </head>
+
 <body>
 
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
     <nav class="navbar">
-        <a href="index.html" class="navbar-brand">Scholarships & Internships</a>
+
+        <a href="index.html" class="navbar-brand">
+            Scholarships & Internships
+        </a>
+
         <ul class="navbar-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="mailto:sujith81159@gmail.com">Contact Us</a></li>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="mailto:sujith81159@gmail.com">
+                    Contact Us
+                </a>
+            </li>
+
         </ul>
+
     </nav>
+
+
+    <!-- =========================
+         PRIVACY POLICY
+    ========================= -->
 
     <div class="container">
 
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: 14/08/2026</p>
+        <h1>
+            Privacy Policy
+        </h1>
+
+        <p class="last-updated">
+            Last updated: 15/08/2026
+        </p>
+
+
+        <!-- =========================
+             1. INTRODUCTION
+        ========================= -->
 
         <div class="section">
-            <h2>1. Introduction</h2>
-            <p>Welcome to Scholarships & Internships ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+
+            <h2>
+                1. Introduction
+            </h2>
+
+            <p>
+                Welcome to Scholarships & Internships
+                ("we," "our," or "us"). We operate the
+                Scholarships & Internships mobile application
+                and the website that publishes and provides
+                information about scholarships, internships,
+                competitions, grants, research opportunities,
+                and other educational and professional
+                opportunities.
+            </p>
+
+            <p>
+                This Privacy Policy explains how information
+                is handled when you use our mobile application.
+                We are committed to protecting your privacy
+                and minimizing the collection of personal
+                information.
+            </p>
+
         </div>
 
+
+        <!-- =========================
+             2. INFORMATION WE COLLECT
+        ========================= -->
+
         <div class="section">
-            <h2>2. Information We Collect</h2>
-            <p>We do not collect, store, or transmit any personal data to external servers. All information generated by your use of the app is stored locally on your device, including:</p>
+
+            <h2>
+                2. Information We Collect
+            </h2>
+
+            <p>
+                The app does not require you to create an
+                account or provide personal information in
+                order to browse opportunities.
+            </p>
+
+            <p>
+                We do not intentionally collect, store, or
+                transmit personal information such as your
+                name, email address, phone number, home address,
+                or account credentials through the app.
+            </p>
+
+            <p>
+                Information associated with your use of the
+                app may be stored locally on your device,
+                including:
+            </p>
+
             <ul>
-                <li>Liked or saved opportunities</li>
-                <li>Application tracking data</li>
-                <li>App preferences and theme settings</li>
-                <li>Subscription status</li>
+
+                <li>
+                    Liked or saved opportunities
+                </li>
+
+                <li>
+                    Application tracking information
+                </li>
+
+                <li>
+                    App preferences and theme settings
+                </li>
+
+                <li>
+                    Other locally stored app settings
+                </li>
+
             </ul>
-            <p>This data never leaves your device and is not accessible by us or any third party.</p>
+
+            <p>
+                This locally stored information is not
+                transmitted to us by the app.
+            </p>
+
         </div>
 
+
+        <!-- =========================
+             3. CONTENT AND RSS FEEDS
+        ========================= -->
+
         <div class="section">
-            <h2>3. App Store Purchases</h2>
-            <p>The app offers optional premium subscriptions (monthly and annual) via Apple's In-App Purchase system. When you make a purchase:</p>
+
+            <h2>
+                3. Opportunity Content and RSS Feeds
+            </h2>
+
+            <p>
+                The Scholarships & Internships app displays
+                opportunity information published through
+                our own website. The app retrieves selected
+                content from our website using RSS feeds and
+                related web-based content services.
+            </p>
+
+            <p>
+                We research and publish information about
+                opportunities available around the world,
+                including scholarships, internships,
+                competitions, grants, research opportunities,
+                and other educational or professional
+                opportunities.
+            </p>
+
+            <p>
+                The information published on our website may
+                be based on publicly available information
+                provided by universities, educational
+                institutions, companies, organizations,
+                government bodies, competition organizers,
+                and other third-party sources.
+            </p>
+
+            <p>
+                We do not claim ownership of third-party
+                opportunity information where such information
+                belongs to the original publisher or provider.
+                Where appropriate, users may be directed to
+                the original source or external website for
+                complete information and application details.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             4. EXTERNAL WEBSITES
+        ========================= -->
+
+        <div class="section">
+
+            <h2>
+                4. External Websites and Opportunities
+            </h2>
+
+            <p>
+                The app may contain links to our website as
+                well as links to external websites operated
+                by universities, companies, organizations,
+                scholarship providers, internship providers,
+                competition organizers, and other third parties.
+            </p>
+
+            <p>
+                When you follow a link to an external website,
+                you are leaving the Scholarships & Internships
+                app. Those websites operate independently and
+                may collect information according to their own
+                privacy policies and terms.
+            </p>
+
+            <p>
+                We are not responsible for the privacy practices,
+                content, security, or data collection practices
+                of external websites.
+            </p>
+
+            <p>
+                We recommend reviewing the privacy policy and
+                terms of any external website before submitting
+                personal information or applying for an
+                opportunity.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             5. APP STORE PURCHASES
+        ========================= -->
+
+        <div class="section">
+
+            <h2>
+                5. App Store Purchases
+            </h2>
+
+            <p>
+                If premium subscriptions or other in-app
+                purchases are offered in the iOS version of
+                the application, payments are processed through
+                Apple's In-App Purchase system.
+            </p>
+
+            <p>
+                When a purchase is made:
+            </p>
+
             <ul>
-                <li>Payment is processed entirely by Apple through your Apple ID</li>
-                <li>We do not receive, store, or have access to your payment information</li>
-                <li>Subscription status is validated on-device using Apple's StoreKit 2 receipt validation</li>
-                <li>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period</li>
-                <li>You can manage or cancel your subscription in your Apple ID account settings</li>
+
+                <li>
+                    Payment is processed by Apple through
+                    the user's Apple ID.
+                </li>
+
+                <li>
+                    We do not receive or store the user's
+                    credit card or other payment credentials.
+                </li>
+
+                <li>
+                    Subscription and purchase information is
+                    handled through Apple's StoreKit services
+                    and the applicable purchase infrastructure.
+                </li>
+
+                <li>
+                    Users can manage or cancel subscriptions
+                    through their Apple ID account settings,
+                    subject to Apple's applicable subscription
+                    terms.
+                </li>
+
             </ul>
+
         </div>
 
-        <div class="section">
-            <h2>4. Third-Party Content</h2>
-            <p>The app displays content sourced from RSS feeds. This content is aggregated from publicly available scholarship, internship, and competition listings. We do not modify the content of these feeds. When you tap on an opportunity, you may be directed to external websites that have their own privacy policies.</p>
-        </div>
+
+        <!-- =========================
+             6. GOOGLE PLAY
+        ========================= -->
 
         <div class="section">
-            <h2>5. Analytics and Tracking</h2>
-            <p>We do not use any analytics, crash reporting, or tracking SDKs. No data is sent to third-party analytics services. Your usage of the app is completely private.</p>
+
+            <h2>
+                6. Google Play
+            </h2>
+
+            <p>
+                The Android version of the application is
+                distributed through Google Play. Google may
+                process information associated with the
+                installation, distribution, security, and
+                operation of applications through Google Play
+                according to Google's own policies.
+            </p>
+
+            <p>
+                We do not receive your Google account password
+                or payment credentials through the app.
+            </p>
+
         </div>
 
-        <div class="section">
-            <h2>6. Data Security</h2>
-            <p>Since all data is stored locally on your device, it is protected by your device's built-in security features. If you delete the app, all locally stored data is permanently removed.</p>
-        </div>
+
+        <!-- =========================
+             7. ANALYTICS AND TRACKING
+        ========================= -->
 
         <div class="section">
-            <h2>7. Children's Privacy</h2>
-            <p>The app is suitable for all ages. We do not collect any personal information from anyone, including children under the age of 13.</p>
+
+            <h2>
+                7. Analytics and Tracking
+            </h2>
+
+            <p>
+                We do not intentionally use the app to collect
+                personal browsing profiles or track individual
+                users across other applications or websites.
+            </p>
+
+            <p>
+                We do not sell personal information or use
+                personal information collected through the
+                application for targeted advertising.
+            </p>
+
         </div>
 
-        <div class="section">
-            <h2>8. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this policy periodically.</p>
-        </div>
+
+        <!-- =========================
+             8. DATA SECURITY
+        ========================= -->
 
         <div class="section">
-            <h2>9. Contact Us</h2>
-            <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-            <p><a href="mailto:sujith81159@gmail.com">sujith81159@gmail.com</a></p>
+
+            <h2>
+                8. Data Security
+            </h2>
+
+            <p>
+                Information stored locally by the application
+                is protected by the security mechanisms of
+                your device and operating system.
+            </p>
+
+            <p>
+                If you uninstall the application, locally
+                stored application data may be removed by
+                the operating system.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             9. CHILDREN'S PRIVACY
+        ========================= -->
+
+        <div class="section">
+
+            <h2>
+                9. Children's Privacy
+            </h2>
+
+            <p>
+                The application provides information about
+                educational and professional opportunities
+                and does not require users to provide personal
+                information to browse its content.
+            </p>
+
+            <p>
+                We do not knowingly collect personal information
+                from children through the application.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             10. CONTENT ACCURACY
+        ========================= -->
+
+        <div class="section">
+
+            <h2>
+                10. Opportunity Information and Accuracy
+            </h2>
+
+            <p>
+                We make reasonable efforts to discover and
+                publish useful opportunity information from
+                publicly available sources. However, opportunity
+                details such as eligibility requirements,
+                deadlines, fees, availability, application
+                procedures, and other conditions may change
+                after publication.
+            </p>
+
+            <p>
+                Users should always verify the latest information
+                with the original opportunity provider before
+                submitting an application, paying a fee, or
+                providing personal information.
+            </p>
+
+            <p>
+                The Scholarships & Internships app is an
+                information and discovery service and does not
+                guarantee acceptance, funding, employment,
+                admission, or participation in any opportunity.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             11. CHANGES
+        ========================= -->
+
+        <div class="section">
+
+            <h2>
+                11. Changes to This Policy
+            </h2>
+
+            <p>
+                We may update this Privacy Policy from time
+                to time to reflect changes to the application,
+                website, services, or applicable requirements.
+            </p>
+
+            <p>
+                Any changes will be published on this page
+                with an updated "Last updated" date.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             12. CONTACT
+        ========================= -->
+
+        <div class="section">
+
+            <h2>
+                12. Contact Us
+            </h2>
+
+            <p>
+                If you have questions, concerns, or requests
+                regarding this Privacy Policy or the
+                Scholarships & Internships application,
+                please contact us at:
+            </p>
+
+            <p>
+                <a href="mailto:sujith81159@gmail.com">
+                    sujith81159@gmail.com
+                </a>
+            </p>
+
         </div>
 
     </div>
 
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer class="footer">
-        <p>&copy; 2026 Scholarships & Internships. All rights reserved.</p>
+
         <p>
-            <a href="index.html">Home</a> &middot;
-            <a href="mailto:sujith81159@gmail.com">Contact</a>
+            &copy; 2026 Scholarships & Internships.
+            All rights reserved.
         </p>
+
+        <p>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            &middot;
+
+            <a href="mailto:sujith81159@gmail.com">
+                Contact
+            </a>
+
+        </p>
+
     </footer>
 
 </body>
